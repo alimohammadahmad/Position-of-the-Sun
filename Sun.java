@@ -1,5 +1,4 @@
 
-package astrolife;
 import static java.lang.Math.*;
 
 
@@ -7,7 +6,7 @@ public class Sun {
   
     public double X=57.2957795130823,JD,T,L0,M0,e0,E=23.45;
     
-    
+    // y= year , m =month , d= day , h =hours , mi =minutes
     public double Longitude(int y,int m,int d,int h,int mi){
        int A,B;
       double  D;
@@ -57,7 +56,7 @@ public class Sun {
         public double RA(int y,int m,int d,int h,int mi){
         
         double j=Longitude( y, m, d, h, mi);
-        double r= atan2(cos(E/X)*sin(j/X),cos(j/X))*X;
+        double r= atan2(cos(E/X)*sin(j/X),cos(j/X))*X; //Right ascension
         if(r<0) r=r+360;
         return r;
         
